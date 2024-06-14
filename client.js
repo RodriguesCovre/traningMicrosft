@@ -10,23 +10,23 @@ const options = {
 };
 
 const req = http.get(options, (res) => {
-  console.log(`Connected - Status Code ${res.statusCode}`);
+  console.log(`Conectar- Status Código ${res.statusCode}`);
 
   res.on('data', (chunk) => {
     console.log("Chunk data: ", chunk.toString());
   });
 
   res.on('end', () => {
-    console.log('No more data');
+    console.log('sem data');
   });
 
   res.on('close', () => {
-    console.log('Connection closed');
+    console.log('Conexao fechada');
   });
 });
 
 req.on('error', (error) => {
-  console.error('An error occurred: ', error);
+  console.error('Ocoreu um erro: ', error);
 });
 
 req.end();
