@@ -2,7 +2,7 @@ const express = require("express");
 function isAuthorized(req, res, next){
   const authHeader = req.headers.authorization;
 
-  if(!authHeader || authHeader !== 'senhaSiuperSecreta'){
+  if(!authHeader || authHeader !== 'senhaSuperSecreta'){
     return res.status(401).send('Acesso negado');
   }
   next();
