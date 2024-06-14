@@ -16,7 +16,7 @@ app.get("/users", isAuthorized, (req, res) => {
   res.json([
     {
       id: 1,
-      name: "User Userson",
+      name: "User",
     },
   ]);
 });
@@ -25,7 +25,7 @@ app.get("/products", (req, res) => {
   res.json([
     {
       id: 1,
-      name: "The Bluest Eye",
+      name: "teste",
     },
   ]);
 });
