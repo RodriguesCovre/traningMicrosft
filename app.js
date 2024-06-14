@@ -2,8 +2,8 @@ const express = require("express");
 function isAuthorized(req, res, next){
   const authHeader = req.headers.authorization;
 
-  if(!authHeader || authHeader !== 'secretpassword'){
-    return res.status(401).send('Unauthorized: Acces Denied');
+  if(!authHeader || authHeader !== 'senhaSiuperSecreta'){
+    return res.status(401).send('Acesso negado');
   }
   next();
 }
@@ -30,4 +30,4 @@ app.get("/products", (req, res) => {
   ]);
 });
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+app.listen(port, () => console.log(`Servidor aberto na porta http://localhost:${port}`));
